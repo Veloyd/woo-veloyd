@@ -2,7 +2,7 @@
 /*
 Plugin Name: WooCommerce Veloyd
 Author: Veloyd
-Version: 1.0.3
+Version: 1.0.2
 Text Domain: woocommerce-veloyd
 
 License: GPLv3 or later
@@ -94,7 +94,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
                 "reference" => $order->get_order_number(),
 	            "options" => Array()
                 ),
-                "plugin" => "WooCommerce 1.0.3"
+                "plugin" => "WooCommerce 1.0.2"
 	        );
 
 	        $curl = curl_init();
