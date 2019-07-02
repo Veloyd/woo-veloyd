@@ -9,6 +9,16 @@ License: GPLv3 or later
 License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 
+require 'plugin-update-checker-4.6/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/Veloyd/woo-veloyd',
+	__FILE__,
+	'woocommerce-veloyd'
+);
+
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
+
 
 /**
  * Check if WooCommerce is active
