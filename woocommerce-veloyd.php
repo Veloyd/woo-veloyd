@@ -2,7 +2,7 @@
 /*
 Plugin Name: WooCommerce Veloyd
 Author: Veloyd
-Version: 1.0.2
+Version: 1.0.3
 Text Domain: woocommerce-veloyd
 
 License: GPLv3 or later
@@ -30,12 +30,12 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		exit; // Exit if accessed directly
 	}
 
-	if ( is_admin() ){ // admin actions
+	if ( is_admin() ){
 	  add_action('admin_menu', 'veloyd_register_settings_page');
-	  add_action( 'admin_init', 'register_mysettings' );
+	  add_action( 'admin_init', 'veloyd_register_settings' );
 	}
 
-	function register_mysettings() { // whitelist options
+	function veloyd_register_settings() {
 	  register_setting( 'veloyd-settings', 'veloyd_api_key' );
 	}
 
@@ -94,7 +94,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
                 "reference" => $order->get_order_number(),
 	            "options" => Array()
                 ),
-                "plugin" => "WooCommerce 1.0.2"
+                "plugin" => "WooCommerce 1.0.3"
 	        );
 
 	        $curl = curl_init();
