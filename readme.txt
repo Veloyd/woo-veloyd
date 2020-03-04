@@ -25,3 +25,6 @@ This section describes how to install the plugin and get it working.
 
 = 1.0.2 =
 * Added "Check for updates" feature.
+
+= 1.0.3 =
+* Fixed bug redeclare register_mysettings.
